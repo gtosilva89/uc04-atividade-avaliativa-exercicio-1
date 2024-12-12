@@ -33,7 +33,7 @@ function gerarSenha(): string {
   while (senha.length < 10) {
     senha += escolherCaractere(todosCaracteres); // Adiciona um caractere aleatório do conjunto completo
   }
-  
+
   // Embaralhando os caracteres da senha para garantir uma distribuição aleatória
   senha = senha.split('').sort(function() { return Math.random() - 0.5 }).join(''); // Embaralha os caracteres da senha
   return senha; // Retorna a senha gerada
