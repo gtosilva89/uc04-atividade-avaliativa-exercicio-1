@@ -13,7 +13,7 @@ function gerarSenha(): string {
   const letrasMaiusculas = gerarLetrasMaiusculas();
   const letrasMinusculas = gerarLetrasMinusculas();
   const numeros = gerarNumeros();
-  const caracteresEspeciais = ['.', '#', '/', '?', '@'];
+  const caracteresEspeciais = caracterEspecial();
 
   // Concatenando todos os conjuntos de caracteres possíveis
   const todosCaracteres = [...letrasMaiusculas, ...letrasMinusculas, ...numeros, ...caracteresEspeciais];
@@ -66,6 +66,10 @@ function gerarLetrasMinusculas(): string[] {
 // Função para gerar números (0-9)
 function gerarNumeros(): string[] {
   return ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
+}
+
+function caracterEspecial() {
+  return ['.', '#', '/', '?', '@', '!', '$', '%', '&', '*', '+', '-', '=', '~', '^', '_', '`', '{', '}', '[', ']', '(', ')', '<', '>', '|'];
 }
 
 // Gerando 5 senhas seguras e armazenando-as em um array
